@@ -15,14 +15,14 @@ function Home(props) {
     <div className="homeContainer">
       <Navigation />
       <Banner />
-      <HousingSearch />
-      <Advantages />
-      <Actus/>
-      <HousingSelection/>
-      <OnlineAgency/>
-      <Testimonials/>
-      <JoinUs/>
-      <Footer />
+      {/* <HousingSearch /> */}
+      {/* <Advantages /> */}
+      {/* <Actus/> */}
+      {/* <HousingSelection/> */}
+      {/* <OnlineAgency/> */}
+      {/* <Testimonials/> */}
+      {/* <JoinUs/> */}
+      {/* <Footer /> */}
     </div>
   );
 }
