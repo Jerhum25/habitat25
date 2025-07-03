@@ -1,0 +1,23 @@
+[
+     {
+        "src": "../assets/housingSelection/housingSelection1.webp",
+        "location":"Montbéliard, 25200",
+        "title":"Appartement 72 m²",
+        "price":651,
+        "charges": 267
+     },
+     {
+        "src": "../assets/housingSelection/housingSelection2.webp",
+        "location":"Bavans, 25550",
+        "title":"Appartement 7 m²",
+        "price":640,
+        "charges": 304
+     },
+     {
+        "src": "../assets/housingSelection/housingSelection3.webp",
+        "location":"Sochaux, 25600",
+        "title":"Appartement 89 m²",
+        "price":780,
+        "charges": 337
+     }
+]

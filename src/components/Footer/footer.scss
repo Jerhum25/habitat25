@@ -1,0 +1,36 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    padding: 20px ;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%);
+    // bottom: 0;
+    .footer-haut{
+        display: flex;
+        align-items: flex-start;
+    .logo{
+        margin-right: 80px;
+    }
+    .footer-haut-centre{
+        width: 35%;
+        font-size: 14px;
+    }
+    .footer-haut-droit{
+        margin-left: auto;
+        margin-right: 110px;
+        h4{
+            color: #00415a;
+            margin-bottom: 10px;
+        }
+        ul li{
+            list-style-type: none;
+            padding: 5px 0;
+            cursor: pointer;
+            color: #3d3d3d;
+        }
+    }
+    }
+}

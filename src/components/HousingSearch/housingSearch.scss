@@ -1,0 +1,184 @@
+.housingSearch {
+  width: 82%;
+  // max-width: 1170px;
+  padding: 30px 30px 0 0;
+  z-index: 10;
+  background: #fff;
+  top: -122px;
+  position: relative;
+  form {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    // flex-wrap: wrap;
+    justify-content: flex-end;
+    // max-width: 1150px;
+    padding-left: 20px;
+    gap: 15px;
+    margin-left: auto;
+    label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 500;
+      max-width: fit-content;
+      min-width: 200px;
+      height: auto;
+      gap: 10px;
+      // padding: 20px;
+      p {
+        white-space: nowrap;
+      }
+      input,
+      select {
+        height: 60px;
+        width: 100%;
+        // margin: 10px 60px 0 0;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid lightgrey;
+        outline: none;
+        background: #e6edf0;
+        font-size: 16px;
+        &:focus {
+          border: 1px solid grey;
+        }
+      }
+      .inputIcon {
+        position: relative;
+        i {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #e6edf0;
+          width: 25px;
+          height: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          color: #00739a;
+          font-size: 14px;
+          border: 2px solid #00739adf;
+        }
+      }
+      .inputLocation {
+        position: relative;
+        input {
+          width: 100%;
+          padding-left: 35px;
+          text-transform: capitalize;
+        }
+        i {
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #e6edf0;
+          width: 25px;
+          height: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          color: #b7c0c4;
+          // font-size: 14px;
+        }
+      }
+      .type option:nth-child(1) {
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+    .location {
+      width: 300px;
+    }
+
+    button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: #00739a;
+      border: none;
+      align-self: flex-end;
+      transition: 0.2s ease-in-out;
+      aspect-ratio: 1/1;
+      &:hover {
+        background-color: #0b4d67;
+      }
+      i {
+        font-size: 25px;
+        color: #fff;
+      }
+    }
+    .rentBuyBtns {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      top: -80px;
+      left: 20%;
+      border-radius: 5px;
+      // overflow: hidden;
+      .rent,
+      .buy {
+        padding: 20px;
+        border: 1px solid #000;
+        font-weight: bold;
+        letter-spacing: 1px;
+        background-color: #fff;
+        border: none;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+        position: relative;
+
+        &.active {
+          background-color: red;
+          color: #fff;
+        }
+        &:hover p::after {
+          width: 100%;
+        }
+        p {
+          position: relative;
+          &::after {
+            position: absolute;
+            bottom: -3px;
+            content: "";
+            width: 0%;
+            height: 3px;
+            left: 0;
+            background-color: red;
+            transition: 0.2s ease-in-out;
+          }
+        }
+        .triangle {
+          display: none;
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid red;
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          translate: -50%;
+        }
+        .visible {
+          display: flex;
+        }
+      }
+      .rent {
+        border-radius: 5px 0 0 5px;
+      }
+      .buy {
+        border-radius: 0 5px 5px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.joinUsContainer {
+  margin-bottom: 50px;
+  .joinUsWrapper {
+    display: flex;
+    max-width: 1170px;
+    margin: auto;
+    gap: 100px;
+    .work,
+    .jobOffers {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h2 {
+        font-size: 50px;
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 50px;
+        &::after {
+          position: absolute;
+          content: "";
+          bottom: -10px;
+          left: 0;
+          width: 40px;
+          height: 4px;
+          background-color: #76b82a;
+        }
+      }
+    }
+    .work {
+      width: 60%;
+      p {
+        text-align: justify;
+      }
+      a {
+        color: #00739a;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 5px;
+        font-size: 14px;
+        text-transform: none;
+        &:hover {
+          text-decoration: underline;
+          color: #116081;
+        }
+        svg {
+          font-weight: bold;
+        }
+      }
+    }
+    .jobOffers {
+      width: 40%;
+      .card {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        padding: 44px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 8px;cursor: pointer;
+        .offerStatus {
+          width: 76px;
+          height: 76px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #76b82a;
+          border-radius: 50%;
+          background-color: #ebf8e7;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 20px;
+        }
+        .location {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          svg {
+            font-size: 20px;
+            color: lightgrey;
+          }
+        }
+        button {
+          background-color: #16739a;
+          padding: 5px 30px;
+          border-radius: 40px;
+          width: 90%;margin: auto;
+          cursor: pointer;
+          border: none;
+          transition: 0.2s ease-in-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg:first-child {
+            width: 24px;
+            height: 24px;
+          }
+          a {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-weight: bold;
+            height: 60px;
+            white-space: nowrap;
+            color: #fff;font-size: 16px;
+          }
+        }
+        &:hover button{
+          background-color: #116081;
+        }
+      }
+      .allOffers {
+                color: #00739a;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 5px;
+        font-size: 14px;
+        text-transform: none;
+        &:hover {
+          text-decoration: underline;
+          color: #116081;
+        }
+        svg {
+          font-weight: bold;
+        }
+
+      }
+    }
+  }
+}

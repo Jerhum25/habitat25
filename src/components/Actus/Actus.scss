@@ -1,0 +1,63 @@
+.actusContainer {
+  background: linear-gradient(180deg, #deeeed 0%, rgba(222, 238, 237, 0) 12%),
+    linear-gradient(180deg, #deeeed 0%, rgba(222, 238, 237, 0) 16%);
+  .actusWrapper {
+    width: 82%;
+    max-width: 1170px;
+    height: max-content;
+    margin: auto;
+
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 0;
+    position: relative;
+    h2 {
+      text-transform: capitalize;
+      font-size: 50px;
+      font-weight: 500;
+      position: relative;
+      display: flex;
+      align-items: center;justify-content: space-between;
+      margin-bottom: 50px;
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: -10px;
+        left: 0;
+        width: 40px;
+        height: 4px;
+        background-color: #76b82a;
+      }
+      p.more {
+        color: #00739a;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 5px;
+        font-size: 14px;
+        text-transform: none;
+        &:hover {
+          text-decoration: underline;
+          color: #116081;
+        }
+        svg {
+          font-weight: bold;
+        }
+      }
+    }
+    .actusCards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      height: 380px;
+      overflow: hidden;
+    }
+    .more {
+      height: max-content;
+      overflow: visible;
+    }
+  }
+}

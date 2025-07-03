@@ -1,0 +1,17 @@
+.advantagesContainer {
+  width: 82%;
+  max-width: 1170px;
+  margin: auto;
+  height: max-content;
+  display: flex;
+  // justify-content: center;
+  padding-bottom: 50px;
+
+  .advantagesCards {width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+  }
+}

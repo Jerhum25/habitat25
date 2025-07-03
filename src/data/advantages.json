@@ -1,0 +1,14 @@
+[
+    {
+        "icon":"far fa-smile",
+        "text":"Pas de frais d'agence, pas de frais de dossier"
+    },
+    {
+        "icon":"fas fa-hand-holding-heart",
+        "text":"Aides au logement"
+    },
+    {
+        "icon":"fas fa-calculator",
+        "text":"Pas d'avance de loyer à l'emménagement"
+    }
+]
