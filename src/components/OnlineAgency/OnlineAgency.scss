@@ -7,7 +7,9 @@
       width: 60%;
       background-color: #08415a;
       color: #fff;
-      padding: 90px;position: relative;z-index: 1;
+      padding: 90px;
+      position: relative;
+      z-index: 1;
       h2 {
         //   text-transform: capitalize;
         font-size: 50px;
@@ -44,15 +46,17 @@
             width: fit-content;
             cursor: pointer;
             transition: 0.2s ease-in-out;
-            svg:first-child{
-                width: 24px;height: 24px;
+            svg:first-child {
+              width: 24px;
+              height: 24px;
             }
             p {
               display: flex;
               gap: 8px;
               align-items: center;
               font-weight: bold;
-              height: 60px;white-space: nowrap;
+              height: 60px;
+              white-space: nowrap;
             }
             &:hover {
               background-color: #116081;
@@ -84,7 +88,8 @@
                 width: 45px;
                 height: 45px;
                 padding: 6px;
-                border-radius: 50%;aspect-ratio: 1 / 1;
+                border-radius: 50%;
+                aspect-ratio: 1 / 1;
               }
               &:not(:last-child) {
                 border-bottom: 1px solid lightgrey;
@@ -102,6 +107,64 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .onlineAgencyContainer {
+    width: 100%;
+    min-height: fit-content;
+    .onlineAgencyWrapper {
+      flex-direction: column;
+      .text {
+        width: 100%;
+        height: fit-content;
+        padding: 40px 20px;
+        h2 {
+          font-size: 24px;
+        }
+        .contents {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          height: fit-content;
+          .leftContent {
+            padding-bottom: 220px;
+            .link{height: 45px;
+              p{
+                font-size: 14px;
+                height: 100%;
+                svg{
+                  width: 24px;height: 24px;
+                }
+              }
+            }
+          }
+          .rightContent {
+            position: absolute;
+            bottom: -70px;
+            // display: none;
+            padding: 5px 20px;width: 100%;
+            ul {width: 100%;
+              li {
+                p {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .imgWrapper {
+        width: 100%;
+        height: 240px;
+        img {
+          // width: 100%;
+          // height: 100%;
+          // object-fit: contain;
+        }
       }
     }
   }

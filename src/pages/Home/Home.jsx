@@ -19,7 +19,7 @@ function Home(props) {
       <Advantages />
       <Actus/>
       <HousingSelection/>
-      {/* <OnlineAgency/> */}
+      <OnlineAgency/>
       {/* <Testimonials/> */}
       {/* <JoinUs/> */}
       {/* <Footer /> */}
