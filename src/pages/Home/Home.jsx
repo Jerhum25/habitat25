@@ -18,7 +18,7 @@ function Home(props) {
       <HousingSearch />
       <Advantages />
       <Actus/>
-      {/* <HousingSelection/> */}
+      <HousingSelection/>
       {/* <OnlineAgency/> */}
       {/* <Testimonials/> */}
       {/* <JoinUs/> */}

@@ -60,3 +60,24 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .housingSelectionContainer {
+    .housingSelectionWrapper {
+      padding: 20px;
+      width: 100%;
+      .housingSelectionCards {
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      h2 {
+        font-size: 24px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}
