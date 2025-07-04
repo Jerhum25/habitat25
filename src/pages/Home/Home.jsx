@@ -16,7 +16,7 @@ function Home(props) {
       <Navigation />
       <Banner />
       <HousingSearch />
-      {/* <Advantages /> */}
+      <Advantages />
       {/* <Actus/> */}
       {/* <HousingSelection/> */}
       {/* <OnlineAgency/> */}

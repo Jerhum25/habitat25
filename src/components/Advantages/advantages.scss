@@ -15,3 +15,21 @@
     height: max-content;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .advantagesContainer {
+    width: 100%;padding: 0 20px;
+    padding-bottom: 40px;
+    .advantagesCards {
+      gap: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+   .advantagesContainer {
+     .advantagesCards {
+       flex-direction: column;
+     }
+   }
+}
