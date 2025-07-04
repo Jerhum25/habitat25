@@ -1,4 +1,4 @@
-.banner {
+.bannerContainer {
   width: 100%;
   position: relative;
   z-index: 1;
@@ -30,4 +30,20 @@
       background-color: #76b82a;
     }
   }
+}
+
+
+@media screen and (max-width: 768px) {
+   .bannerContainer{
+    img{
+      display: none;
+    }
+    .text{
+      position: relative;
+      top: 0;left: 0;transform: translateY(0);display: flex;gap: 10px;
+      p, span{
+        font-size: 18px;
+      }
+    }
+   }
 }
