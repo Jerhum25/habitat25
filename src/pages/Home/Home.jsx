@@ -15,7 +15,7 @@ function Home(props) {
     <div className="homeContainer">
       <Navigation />
       <Banner />
-      {/* <HousingSearch /> */}
+      <HousingSearch />
       {/* <Advantages /> */}
       {/* <Actus/> */}
       {/* <HousingSelection/> */}

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./housingSearch.scss";
 
 function HousingSearch(props) {
@@ -11,12 +12,24 @@ function HousingSearch(props) {
     // e.stopPropagation();
     e.target.classList.add("active");
     e.target.lastChild.classList.add("visible");
-
   }
 
+  const [innerWidth, setInnerWidth] = useState();
+  window.addEventListener("resize", () => setInnerWidth(window.innerWidth));
+
   return (
-    <div className="housingSearch">
+    <div className="housingSearchContainer">
       <form action="">
+        <div className="rentBuyBtns">
+          <div className="rent active" onClick={btnIsActive}>
+            <p>Louer</p> <div className="triangle visible"></div>
+          </div>
+          <div className="buy" onClick={btnIsActive}>
+            <p>Acheter</p>
+            <div className="triangle"></div>
+          </div>
+        </div>
+
         <label htmlFor="location" className="location">
           <p>Localités</p>
           <div className="inputLocation">
@@ -49,22 +62,18 @@ function HousingSearch(props) {
         <label htmlFor="budget" className="budget">
           <p>Budget maximum</p>
           <div className="inputIcon">
-            <input type="number" />
-            <i class="fas fa-euro-sign"></i>
+            <input type="number" min={0}/><i class="fas fa-euro-sign"></i>
           </div>
         </label>
         <button type="submit">
-          <i className="fas fa-search"></i>
+                      {innerWidth >= 992 ? (
+              <i className="fas fa-search"></i>
+            ) : (
+              <><i className="fas fa-search"></i><p>Rechercher</p></>
+            )}
+
+          
         </button>
-        <div className="rentBuyBtns">
-          <div className="rent active" onClick={btnIsActive}>
-            <p >Louer</p> <div className="triangle visible"></div>
-          </div>
-          <div className="buy" onClick={btnIsActive}>
-            <p >Acheter</p>
-            <div className="triangle"></div>
-          </div>
-        </div>
       </form>
     </div>
   );
