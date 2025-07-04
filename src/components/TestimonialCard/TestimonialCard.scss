@@ -1,5 +1,6 @@
 .testimonialCardContainer {
-  width: 570px;
+  max-width: 570px;
+  width: 100%;
   min-height: 285px;
   border: 1px solid lightgrey;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -34,28 +35,75 @@
       .family {
         font-size: 20px;
       }
-      .link{
-                    background-color: #16739a;
-            padding: 5px 30px;
-            border-radius: 40px;
-            width: fit-content;
-            cursor: pointer;
-            transition: 0.2s ease-in-out;
-            svg:first-child{
-                width: 24px;height: 24px;
-            }
-            p {
-              display: flex;
-              gap: 8px;
-              align-items: center;
-              font-weight: bold;
-              height: 60px;white-space: nowrap;color: #fff;
-            }
-            &:hover {
-              background-color: #116081;
-            }
-
+      .link {
+        background-color: #16739a;
+        padding: 5px 30px;
+        border-radius: 40px;
+        width: fit-content;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        svg:first-child {
+          width: 24px;
+          height: 24px;
+        }
+        p {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          font-weight: bold;
+          height: 60px;
+          white-space: nowrap;
+          color: #fff;
+        }
+        &:hover {
+          background-color: #116081;
+        }
       }
     }
   }
+}
+
+@media screen and (max-width: 992px) {
+  .testimonialCardContainer {
+    max-width: 100%;
+    .testimonialCardWrapper {
+      padding: 20px 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonialCardContainer {
+    min-height: fit-content;
+    .testimonialCardWrapper {
+      gap: 15px;
+      .userIcon {width: 50px;
+        svg {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .testimonialDetails {
+        gap: 10px;
+        .link {
+          height: 45px;
+          margin: auto;
+          p {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 575px) {
+   .testimonialCardContainer {
+     .testimonialCardWrapper{
+      .userIcon {
+        display: none;
+      }
+     }
+   }
 }

@@ -20,7 +20,7 @@ function Home(props) {
       <Actus/>
       <HousingSelection/>
       <OnlineAgency/>
-      {/* <Testimonials/> */}
+      <Testimonials/>
       {/* <JoinUs/> */}
       {/* <Footer /> */}
     </div>
