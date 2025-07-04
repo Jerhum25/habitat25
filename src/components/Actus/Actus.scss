@@ -6,7 +6,6 @@
     max-width: 1170px;
     height: max-content;
     margin: auto;
-
     flex-direction: column;
     gap: 30px;
     padding: 50px 0;
@@ -17,7 +16,8 @@
       font-weight: 500;
       position: relative;
       display: flex;
-      align-items: center;justify-content: space-between;
+      align-items: center;
+      justify-content: space-between;
       margin-bottom: 50px;
       &::after {
         position: absolute;
@@ -58,6 +58,25 @@
     .more {
       height: max-content;
       overflow: visible;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .actusContainer {
+    width: 100%;
+    padding: 40px 20px;
+    .actusWrapper {padding: 0;
+      width: 100%;
+      h2 {
+        font-size: 24px;
+      }
+      .actusCards {
+        flex-wrap: nowrap;height: min-content;
+        overflow-x: scroll;
+        // -ms-overflow-style : none ;
+        &::-webkit-scrollbar{display: none;}
+      }
     }
   }
 }

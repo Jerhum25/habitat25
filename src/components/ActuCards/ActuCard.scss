@@ -1,5 +1,6 @@
 .actuCardContainer {
   width: 370px;
+  min-width: 236px;
   min-height: 350px;
   display: flex;
   flex-direction: column;
@@ -40,10 +41,26 @@
   &:hover .imgWrapper::after {
     opacity: 0.8;
   }
-  h3,
-  p {
+  h3.actuTitle,
+  p.actuText {
     // width: 80%;
     // margin: auto;
     padding: 0 20px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .actuCardContainer {
+    min-height: auto;
+    max-height: 293px;
+    gap: 10px;
+    margin-bottom: 20px;
+    .imgWrapper {
+      height: 40%;
+    }
+    h3.actuTitle,
+    p.actuText {
+      padding: 0 20px;
+    }
   }
 }

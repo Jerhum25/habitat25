@@ -12,8 +12,8 @@ function ActuCard({ src, title, text }) {
       {/* <div className="blueFilter">
           <FaArrowRightLong />
         </div> */}
-      <h3>{title}</h3>
-      <p>{text}</p>
+      <h3 className="actuTitle">{title}</h3>
+      <p className="actuText">{text}</p>
     </div>
   );
 }
