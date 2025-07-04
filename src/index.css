@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
 }
 
 a{
@@ -12,13 +14,14 @@ a{
 }
 
 body {
-  font-family: Montserrat;
+  font-family: "Montserrat", arial, sans-serif;
   /* max-width: 1440px; */
   /* min-height: 98vh; */
   /* margin: auto; */
   /* position: relative; */
   h2{
     font-family: "Manrope", serif;
+    color: #00415A;
   }
 }
 
@@ -27,3 +30,4 @@ body {
     width: 100%;
   }
 }
+

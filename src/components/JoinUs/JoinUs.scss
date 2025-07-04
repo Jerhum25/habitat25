@@ -57,7 +57,8 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
-        border-radius: 8px;cursor: pointer;
+        border-radius: 8px;
+        cursor: pointer;
         .offerStatus {
           width: 76px;
           height: 76px;
@@ -84,7 +85,8 @@
           background-color: #16739a;
           padding: 5px 30px;
           border-radius: 40px;
-          width: 90%;margin: auto;
+          width: 90%;
+          margin: auto;
           cursor: pointer;
           border: none;
           transition: 0.2s ease-in-out;
@@ -102,15 +104,16 @@
             font-weight: bold;
             height: 60px;
             white-space: nowrap;
-            color: #fff;font-size: 16px;
+            color: #fff;
+            font-size: 16px;
           }
         }
-        &:hover button{
+        &:hover button {
           background-color: #116081;
         }
       }
       .allOffers {
-                color: #00739a;
+        color: #00739a;
         font-weight: bold;
         display: flex;
         align-items: center;
@@ -125,7 +128,34 @@
         svg {
           font-weight: bold;
         }
+      }
+    }
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .joinUsContainer {
+    .joinUsWrapper {
+      padding-inline: 20px;
+      flex-direction: column;
+      gap: 30px;
+      .work,
+      .jobOffers {
+        width: 100%;
+        gap: 20px;
+        h2 {
+          font-size: 24px;
+          margin-bottom: 0px;
+        }
+      }
+      .jobOffers{
+        .card {
+          padding: 22px 15px;
+          width: 100%;
+          button{
+            height: 45px;
+          }
+        }
       }
     }
   }

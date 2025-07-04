@@ -38,7 +38,7 @@ function Navigation() {
   }
 
   return (
-    <div className="navigationContainer">
+    <div className="navigationContainer" >
       <div className="navigationWrapper">
         <RxHamburgerMenu className="burgerMenu" onClick={burgerMenu}/>
         <NavLink to="/">

@@ -4,7 +4,7 @@ import "./banner.scss";
 
 function Banner(props) {
   return (
-    <div className="bannerContainer">
+    <div className="bannerContainer" id="topPage">
       <img src="./assets/banner-background.png" alt="banner background" />
       <div className="text">
       <p><div className="line"></div>Vous cherchez</p><span>un logement ?</span>

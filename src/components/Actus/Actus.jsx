@@ -13,7 +13,7 @@ function more(e) {
 
 function Actus() {
   return (
-    <div className="actusContainer">
+    <div className="actusContainer" id="actus">
       <div className="actusWrapper">
         <h2>
           actualités

@@ -17,7 +17,7 @@ function JoinUs() {
             <a href="a"><CgChevronRight />Nous rejoindre</a>
             <a href="a"><CgChevronRight />Emploi et handicap</a>
           </div>
-          <div className="jobOffers">
+          <div className="jobOffers" id="jobOffers">
             <h2>Nous rejoindre</h2>
             <div className="card">
               <p className="offerStatus">cdi</p>

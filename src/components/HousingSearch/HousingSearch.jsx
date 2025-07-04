@@ -14,7 +14,7 @@ function HousingSearch(props) {
     e.target.lastChild.classList.add("visible");
   }
 
-  const [innerWidth, setInnerWidth] = useState();
+  const [innerWidth, setInnerWidth] = useState(1170);
   window.addEventListener("resize", () => setInnerWidth(window.innerWidth));
 
   return (
@@ -34,7 +34,7 @@ function HousingSearch(props) {
           <p>Localités</p>
           <div className="inputLocation">
             <input type="text" />
-            <i class="fas fa-map-marker-alt"></i>
+            <i className="fas fa-map-marker-alt"></i>
           </div>
         </label>
         <label htmlFor="type">
