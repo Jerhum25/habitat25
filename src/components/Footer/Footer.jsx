@@ -1,5 +1,6 @@
 import { BsLinkedin, BsYoutube } from "react-icons/bs";
 import "./footer.scss";
+import { Link } from "react-router-dom";
 
 function Footer(props) {
   function more(e) {
@@ -34,10 +35,10 @@ function Footer(props) {
             <h4>Consultez également</h4>
             <ul>
               <li>
-                <a href="#actus">Les actualités</a>
+                <Link to="/actualités">Les actualités</Link>
               </li>
               <li>
-                <a href="#jobOffers">Nos offres d'emploi</a>
+                <Link to="/offres-d'emploi">Nos offres d'emploi</Link>
               </li>
               <li>Marchés publics</li>
             </ul>
@@ -63,12 +64,20 @@ function Footer(props) {
           <div className="footerBottomRight">
             <ul className="socialNetworks">
               <li>
-                <a href="https://www.youtube.com/channel/UCLK1bIKOLC0cKoYp1NegpXA" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.youtube.com/channel/UCLK1bIKOLC0cKoYp1NegpXA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <BsYoutube />
                 </a>
               </li>
               <li>
-                <a href="https://fr.linkedin.com/company/habitat25" target="_blank" rel="noreferrer">
+                <a
+                  href="https://fr.linkedin.com/company/habitat25"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <BsLinkedin />
                 </a>
               </li>

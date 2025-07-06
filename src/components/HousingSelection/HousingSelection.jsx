@@ -2,6 +2,7 @@ import { CgChevronRight } from "react-icons/cg";
 import dataHousingSeletion from "../../data/housingSelection.json";
 import HousingSelectionCard from "../HousingSelectionCard/HousingSelectionCard";
 import "./HousingSelection.scss";
+import { Link } from "react-router-dom";
 
 function more(e) {
 //   const actusCards = document.querySelector(".actusCards");
@@ -19,10 +20,10 @@ function HousingSelection() {
 
         <h3>
           En location{" "}
-          <p className="more" onClick={more}>
+          <Link to="/annonces-location" className="more" onClick={more}>
             <CgChevronRight />
             Voir tout
-          </p>
+          </Link>
         </h3>
 
         <div className="housingSelectionCards">

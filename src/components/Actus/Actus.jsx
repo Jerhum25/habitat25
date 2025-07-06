@@ -2,6 +2,7 @@ import { CgChevronRight } from "react-icons/cg";
 import dataActus from "../../data/actus.json";
 import ActuCard from "../ActuCards/ActuCard";
 import "./Actus.scss";
+import { Link } from "react-router-dom";
 
 function more(e) {
   const actusCards = document.querySelector(".actusCards");
@@ -17,10 +18,10 @@ function Actus() {
       <div className="actusWrapper">
         <h2>
           actualités
-          <p className="more" onClick={more}>
+          <Link to="/actualités" className="more" onClick={more}>
             <CgChevronRight />
             Voir tout
-          </p>
+          </Link>
         </h2>
 
         <div className="actusCards">

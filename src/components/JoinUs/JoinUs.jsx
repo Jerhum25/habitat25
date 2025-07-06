@@ -1,6 +1,7 @@
 import { CgChevronRight } from "react-icons/cg";
 import "./JoinUs.scss";
 import { LiaMapMarkerAltSolid } from "react-icons/lia";
+import { Link } from "react-router-dom";
 
 function JoinUs() {
   return (
@@ -27,7 +28,7 @@ function JoinUs() {
               </p>
               <button><a href="a">Consuter l'offre</a></button>
             </div>
-          <a href="a" className="allOffers"><CgChevronRight />Toutes les offres</a>
+          <Link to="/offres-d'emploi" className="allOffers"><CgChevronRight />Toutes les offres</Link>
           </div>
       </div>
     </div>
