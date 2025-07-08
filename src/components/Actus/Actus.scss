@@ -59,6 +59,13 @@
       height: max-content;
       overflow: visible;
     }
+    .actuCardContainer{
+      .content{
+        .date{
+          display: none;
+        }
+      }
+    }
   }
 }
 

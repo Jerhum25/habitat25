@@ -142,6 +142,8 @@
       margin-left: auto;
       .quickLinks {
         display: flex;
+        // visibility: visible;
+        // opacity: 1;
         transition: 0.2s ease-in-out;
         margin-bottom: 15px;
         li {
@@ -192,6 +194,11 @@
           font-size: 16px;
         }
       }
+      .quickLinksHidden {
+        // visibility: hidden;
+        // opacity: 0;
+        display: none;
+      }
     }
   }
   .scroll {
@@ -240,7 +247,7 @@
         top: 0;
         left: 0;
         width: 100svw;
-min-height: fit-content;
+        min-height: fit-content;
         transform: translateY(-100%);
         height: fit-content;
         background-color: #1c87b5;
@@ -248,7 +255,7 @@ min-height: fit-content;
         align-items: start;
         gap: 15px;
         padding: 100px 10px 20px 10px;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         i {
           display: none;
         }

@@ -1,6 +1,6 @@
 import "./ActuCard.scss";
 
-function ActuCard({ src, title, text }) {
+function ActuCard({ src, title, text, date }) {
   function hover(e) {
     const blueFilter = document.querySelector(".blueFilter");
     blueFilter.classList.toggle("visible");
@@ -12,8 +12,11 @@ function ActuCard({ src, title, text }) {
       {/* <div className="blueFilter">
           <FaArrowRightLong />
         </div> */}
-      <h3 className="actuTitle">{title}</h3>
-      <p className="actuText">{text}</p>
+      <div className="content">
+        <h3 className="actuTitle">{title}</h3>
+        <p className="date">{date}</p>
+        <p className="actuText">{text}</p>
+      </div>
     </div>
   );
 }

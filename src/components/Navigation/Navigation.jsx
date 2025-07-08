@@ -7,15 +7,23 @@ import "./navigation.scss";
 function Navigation() {
   window.addEventListener("scroll", () => {
     const navigationWrapper = document.querySelector(".navigationWrapper");
-    const navDroit = document.querySelector(".liens-rapide");
+    const quickLinks = document.querySelector(".quickLinks");
 
-    if (window.scrollY > 200) {
+    if (window.scrollY > 0) {
       navigationWrapper.classList.add("scroll");
-      navDroit.style.display = "none";
-    } else {
+      quickLinks.classList.add("quickLinksHidden");
+    } 
+    
+    else if (window.scrollY < window.scrollY-50) {
       navigationWrapper.classList.remove("scroll");
-      navDroit.style.display = "flex";
+      quickLinks.classList.remove("quickLinksHidden");
     }
+    
+    else {
+      navigationWrapper.classList.remove("scroll");
+      quickLinks.classList.remove("quickLinksHidden");
+    }
+    // console.log(window.scrollY, window.innerHeight);
   });
 
   function underMenuOpen(e) {
@@ -32,15 +40,15 @@ function Navigation() {
     e.currentTarget.firstElementChild.classList.add("underMenuOpen");
   }
 
-  function burgerMenu(e){
-    const links = document.querySelector(".links")
-    links.classList.toggle("visible")
+  function burgerMenu(e) {
+    const links = document.querySelector(".links");
+    links.classList.toggle("visible");
   }
 
   return (
-    <div className="navigationContainer" >
+    <div className="navigationContainer">
       <div className="navigationWrapper">
-        <RxHamburgerMenu className="burgerMenu" onClick={burgerMenu}/>
+        <RxHamburgerMenu className="burgerMenu" onClick={burgerMenu} />
         <NavLink to="/">
           <img src="./assets/logo.svg" alt="logo" className="logo" />
         </NavLink>
