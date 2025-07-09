@@ -7,7 +7,7 @@ function Banner(props) {
     <div className="bannerContainer" id="topPage">
       <img src="./assets/banner-background.png" alt="banner background" />
       <div className="text">
-      <p><div className="line"></div>Vous cherchez</p><span>un logement ?</span>
+      <p><span className="line"></span>Vous cherchez</p><span>un logement ?</span>
 
       </div>
     </div>

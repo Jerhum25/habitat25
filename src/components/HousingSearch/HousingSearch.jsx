@@ -50,8 +50,8 @@ function HousingSearch(props) {
         </label>
         <label htmlFor="numberOfPieces">
           <p>Nombre de pièces</p>
-          <select name="pieces">
-            <option selected>Sélectionner</option>
+          <select name="pieces" defaultValue="Sélectionner">
+            <option value="Sélectionner">Sélectionner</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -62,7 +62,7 @@ function HousingSearch(props) {
         <label htmlFor="budget" className="budget">
           <p>Budget maximum</p>
           <div className="inputIcon">
-            <input type="number" min={0}/><i class="fas fa-euro-sign"></i>
+            <input type="number" min={0}/><i className="fas fa-euro-sign"></i>
           </div>
         </label>
         <button type="submit">

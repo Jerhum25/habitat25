@@ -97,9 +97,11 @@
     .newsCardsWrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
       grid-gap: 15px;
       max-width: 1170px;
       margin: auto;
+      // overflow: hidden;
     }
     .results {
       max-width: 680px;

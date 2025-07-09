@@ -8,9 +8,10 @@ function more(e) {
   const actusCards = document.querySelector(".actusCards");
   actusCards.classList.toggle("more");
   actusCards.classList.contains("more")
-    ? (e.target.textContent = "> Voir moins")
-    : (e.target.textContent = "> Voir tout");
+  ? (e.target.textContent = "> Voir moins")
+  : (e.target.textContent = "> Voir tout");
 }
+const dataActusSlice = dataActus.slice(0,3)
 
 function Actus() {
   return (
@@ -25,7 +26,7 @@ function Actus() {
         </h2>
 
         <div className="actusCards">
-          {dataActus.map((item, index) => (
+          {dataActusSlice.map((item, index) => (
             <ActuCard
               key={index}
               src={item.src}
