@@ -1,5 +1,6 @@
 .newsContainer {
-  width: 100%;padding-bottom: 200px;
+  width: 100%;
+  padding-bottom: 200px;
   .newsWrapper {
     // max-width: 1170px;
     ul.ariane {
@@ -33,9 +34,13 @@
         background-color: #76b82a;
       }
     }
+    button.actuSearch {
+      display: none;
+    }
     .newsSearchWrapper {
       background-color: #deeeed;
       margin-bottom: 32px;
+      height: 100%;
       .newsSearch {
         margin: auto;
         padding: 20px 20px 20px 0;
@@ -118,18 +123,89 @@
           justify-content: center;
           color: #00739a;
           font-weight: bold;
-          transition: 0.2s ease-in-out;cursor: pointer;
+          transition: 0.2s ease-in-out;
+          cursor: pointer;
           &:hover {
             background-color: #deeeed;
           }
           &.active {
             color: #004d67;
             text-decoration: underline;
-            &:hover{
+            &:hover {
               background-color: transparent;
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .newsContainer {
+    width: 100%;padding-bottom: 50px;
+    // padding: 10px;
+    .newsWrapper {
+      ul.ariane {
+        display: none;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      button.actuSearch {
+        display: block;
+        width: fit-content;
+        background-color: #00739a;
+        color: #fff;
+        border: none;
+        margin: 0 0 30px 15px;
+        border-radius: 40px;
+        height: 45px;
+        font-size: 14px;
+        font-weight: bold;
+        padding-inline: 20px;
+        &:hover {
+          background-color: #0b4d67;
+        }
+      }
+      .newsSearchWrapper {
+        display: none;
+        transition: 1.2s ease-in-out;
+        .newsSearch {
+          flex-direction: column;
+          padding: 15px;
+          button {
+            width: 100%;
+            border-radius: 40px;
+            height: 45px;
+            font-size: 14px;
+            font-weight: bold;
+            padding-inline: 20px;
+            display: flex;
+            gap: 10px;
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+      .visible {
+        display: flex;
+      }
+      .newsCardsWrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        width: 100%;
+        transition: 1.2s ease-in-out;
+
+        .actuCardContainer {
+          width: 100%;
+        }
+      }
+      .results {
+        flex-direction: column;gap: 10px;
       }
     }
   }

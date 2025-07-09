@@ -5,17 +5,27 @@ import { Link } from "react-router-dom";
 import ActuCard from "../../components/ActuCards/ActuCard";
 import news from "../../data/actus.json";
 import "./News.scss";
+import { useEffect, useState } from "react";
 
 function News() {
+  const [pageNumber, setPageNumber] = useState(1)
   function onClickPage(e) {
     const pages = document.querySelectorAll(".pagination li");
-    pages.forEach(page => {
-      if(page.classList.contains("active")){
-        page.classList.remove("active")
+    pages.forEach((page) => {
+      if (page.classList.contains("active")) {
+        page.classList.remove("active");
       }
-    })
-    e.target.classList.add("active")
+    });
+    e.target.classList.add("active");
+    
+      
+        pages.forEach(page => {
+          if(page.classList.contains("active"))
+          setPageNumber(page.textContent)
+          
+        });
   }
+
 
 
   return (
@@ -31,6 +41,7 @@ function News() {
         <h2>
           <div className="line"></div>Les actualités
         </h2>
+        <button className="actuSearch" onClick={()=> document.querySelector(".newsSearchWrapper").classList.toggle("visible")}>Rechercher une actualité</button>
         <div className="newsSearchWrapper">
           <div className="newsSearch">
             <input type="text" placeholder="Vous recherchez" />
@@ -49,12 +60,9 @@ function News() {
                 Satisfaction locataires
               </option>
             </select>
-            <button>
-              <TfiReload />
-            </button>
+            <button>{window.innerWidth > 768 ? <TfiReload /> : (<> <TfiReload /><p>Réinitialiser les filtres</p></>)}</button>
             <div className="searchBtnWrapper">
-              <button>
-                <CiSearch />
+              <button>{window.innerWidth > 768 ? <CiSearch /> : (<> <CiSearch /><p>Rechercher</p></>)}
               </button>
             </div>
           </div>
@@ -73,14 +81,16 @@ function News() {
         <div className="results">
           <div className="totalResults">9 résultats sur {news.length}</div>
           <ul className="pagination">
-            <li className="active" onClick={onClickPage}>1</li>
+            <li className="active" onClick={onClickPage}>
+              1
+            </li>
             <li onClick={onClickPage}>2</li>
             <li onClick={onClickPage}>3</li>
             <li onClick={onClickPage}>4</li>
             <li onClick={onClickPage}>5</li>
             <li onClick={onClickPage}>6</li>
           </ul>
-          <div className="totalPages">Page 1 sur 13</div>
+          <div className="totalPages">Page {pageNumber} sur 13</div>
         </div>
       </div>
     </div>
