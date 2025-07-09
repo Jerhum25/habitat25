@@ -1,0 +1,26 @@
+  .topPage {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+    svg {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      color: #fff;
+      background-color: #3d3d3d;
+      padding: 8px;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        background-color: #08415a;
+      }
+    }
+  }
+    .cookiesWrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 20;
+    cursor: pointer;
+  }
+

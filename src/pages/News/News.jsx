@@ -13,10 +13,10 @@ function News() {
   const n = Math.ceil(news.length / 6);
   const totalPages = Array.from({ length: n }, (_, i) => i + 1);
 
-
   useEffect(() => {
     const newArray = news.slice(pageNumber * 6 - 6, pageNumber * 6);
     setNewArray(newArray);
+    window.scrollTo(0, 0);
   }, [pageNumber]);
 
   function onClickPage(e) {

@@ -22,14 +22,6 @@ function Home(props) {
       <Testimonials />
       <JoinUs />
       {/* <Footer /> */}
-      <div className="cookiesWrapper">
-        <img src="./assets/cookies.png" alt="cookies" />
-      </div>
-      <div className="topPage">
-        <a href="#topPage">
-          <MdArrowUpward />
-        </a>
-      </div>
     </div>
   );
 }
