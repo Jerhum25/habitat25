@@ -9,7 +9,6 @@ function HousingSearch(props) {
       btn.classList.remove("active");
       btn.classList.remove("visible");
     });
-    // e.stopPropagation();
     e.target.classList.add("active");
     e.target.lastChild.classList.add("visible");
   }
@@ -40,7 +39,7 @@ function HousingSearch(props) {
         <label htmlFor="type">
           <p>Type de bien</p>
           <select name="type" className="type">
-            <option selected>Type de bien</option>
+            <option>Type de bien</option>
             <option value="appartement">Appartement</option>
             <option value="maison">Maison</option>
             <option value="local commercial">Local commercial</option>
@@ -50,7 +49,7 @@ function HousingSearch(props) {
         </label>
         <label htmlFor="numberOfPieces">
           <p>Nombre de pièces</p>
-          <select name="pieces" defaultValue="Sélectionner">
+          <select name="pieces">
             <option value="Sélectionner">Sélectionner</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -62,17 +61,19 @@ function HousingSearch(props) {
         <label htmlFor="budget" className="budget">
           <p>Budget maximum</p>
           <div className="inputIcon">
-            <input type="number" min={0}/><i className="fas fa-euro-sign"></i>
+            <input type="number" min={0} />
+            <i className="fas fa-euro-sign"></i>
           </div>
         </label>
         <button type="submit">
-                      {innerWidth >= 992 ? (
+          {innerWidth >= 992 ? (
+            <i className="fas fa-search"></i>
+          ) : (
+            <>
               <i className="fas fa-search"></i>
-            ) : (
-              <><i className="fas fa-search"></i><p>Rechercher</p></>
-            )}
-
-          
+              <p>Rechercher</p>
+            </>
+          )}
         </button>
       </form>
     </div>

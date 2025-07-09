@@ -1,12 +1,7 @@
-import './Housing.scss';
-import React from 'react';
+import "./Housing.scss";
 
 function Housing() {
-   return (
-      <div className='housingContainer'>
-locations
-      </div>
-   );
+  return <div className="housingContainer"></div>;
 }
 
 export default Housing;

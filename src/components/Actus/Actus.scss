@@ -52,16 +52,14 @@
       gap: 20px;
       align-items: center;
       justify-content: space-between;
-      // height: 380px;
-      // overflow: hidden;
     }
     .more {
       height: max-content;
       overflow: visible;
     }
-    .actuCardContainer{
-      .content{
-        .date{
+    .actuCardContainer {
+      .content {
+        .date {
           display: none;
         }
       }
@@ -73,16 +71,21 @@
   .actusContainer {
     width: 100%;
     padding: 40px 20px;
-    .actusWrapper {padding: 0;
+    .actusWrapper {
+      padding: 0;
       width: 100%;
       h2 {
-        font-size: 24px;margin-bottom: 20px;
+        font-size: 24px;
+        margin-bottom: 20px;
       }
       .actusCards {
-        flex-wrap: nowrap;height: min-content;
+        flex-wrap: nowrap;
+        height: min-content;
         overflow-x: scroll;
-        // -ms-overflow-style : none ;
-        &::-webkit-scrollbar{display: none;}
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
     }
   }

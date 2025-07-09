@@ -23,7 +23,6 @@ function Navigation() {
       navigationWrapper.classList.remove("scroll");
       quickLinks.classList.remove("quickLinksHidden");
     }
-    // console.log(window.scrollY, window.innerHeight);
   });
 
   function underMenuOpen(e) {

@@ -1,12 +1,7 @@
-import './JobOffers.scss';
-import React from 'react';
+import "./JobOffers.scss";
 
 function JobOffers() {
-   return (
-      <div className='jobOffersContainer'>
-offres d'emploi
-      </div>
-   );
+  return <div className="jobOffersContainer"></div>;
 }
 
 export default JobOffers;

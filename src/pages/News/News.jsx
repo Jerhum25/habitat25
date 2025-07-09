@@ -8,17 +8,11 @@ import news from "../../data/actus.json";
 import "./News.scss";
 
 function News() {
-  const firstSix = news.slice(0, 6);
   const [pageNumber, setPageNumber] = useState(1);
-const [newArray, setNewArray] = useState([])
+  const [newArray, setNewArray] = useState([]);
   const n = Math.ceil(news.length / 6);
   const totalPages = Array.from({ length: n }, (_, i) => i + 1);
 
-  const [resultsPerPage, setResultsPerPage] = useState();
-  useEffect(() => {
-    const newsCardsWrapper = document.querySelector(".newsCardsWrapper");
-    setResultsPerPage(newsCardsWrapper.childElementCount);
-  }, []);
 
   useEffect(() => {
     const newArray = news.slice(pageNumber * 6 - 6, pageNumber * 6);
@@ -34,9 +28,8 @@ const [newArray, setNewArray] = useState([])
     });
     e.target.classList.add("active");
 
-    pages.forEach((page) => {
-      if (page.classList.contains("active")) setPageNumber(page.textContent);
-    });
+    setPageNumber(Number(e.target.textContent));
+    window.scrollTo(0, 0);
   }
 
   return (
@@ -106,7 +99,7 @@ const [newArray, setNewArray] = useState([])
             </div>
           </div>
         </div>
-        <div className="newsCardsWrapper">
+        <div className="newsCardsWrapper" id="newsCardsWrapper">
           {newArray.map((item, index) => (
             <ActuCard
               src={item.src}

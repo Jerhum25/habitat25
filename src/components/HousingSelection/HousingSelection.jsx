@@ -4,13 +4,6 @@ import HousingSelectionCard from "../HousingSelectionCard/HousingSelectionCard";
 import "./HousingSelection.scss";
 import { Link } from "react-router-dom";
 
-function more(e) {
-//   const actusCards = document.querySelector(".actusCards");
-//   actusCards.classList.toggle("more");
-//   actusCards.classList.contains("more")
-//     ? (e.target.textContent = "> Voir moins")
-//     : (e.target.textContent = "> Voir tout");
-}
 
 function HousingSelection() {
   return (
@@ -20,7 +13,7 @@ function HousingSelection() {
 
         <h3>
           En location{" "}
-          <Link to="/annonces-location" className="more" onClick={more}>
+          <Link to="/annonces-location" className="more">
             <CgChevronRight />
             Voir tout
           </Link>
